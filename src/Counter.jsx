@@ -22,7 +22,7 @@ class Counter extends React.Component {
       <div onClick={this.increment} className='counter'>
         <h3 className={this.state.count % 2 === 0 ? 'even' : 'odd'}>{this.state.count}</h3>
         <small>
-          <pre>{JSON.stringify(this.props)}</pre>
+          <pre style={{ fontSize: this.state.count + 'px' }}>{JSON.stringify(this.props)}</pre>
         </small>
       </div>
     );
