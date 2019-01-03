@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import Numero from './Numero.jsx';
-// import logo from './logo.svg';
 import Counter from './Counter.jsx';
 
 import './App.css';
