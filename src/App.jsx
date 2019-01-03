@@ -11,8 +11,8 @@ class App extends Component {
       <div className='App-header'>
         <Counter amount={3} />
         <Counter from={12} />
-        <Counter from='hola' />
-        <Counter from='33' amount='-4' />
+        <Counter from='hola' max='6' amount='3' />
+        <Counter from='33' amount='-4' min='20' />
       </div>
     );
   }
