@@ -9,10 +9,10 @@ class App extends Component {
   render() {
     return (
       <div className='App-header'>
-        <Counter />
+        <Counter amount={3} />
         <Counter from={12} />
         <Counter from='hola' />
-        <Counter from='33' />
+        <Counter from='33' amount='-4' />
       </div>
     );
   }

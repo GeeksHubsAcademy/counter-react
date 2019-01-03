@@ -7,11 +7,19 @@ class Counter extends React.Component {
   }
 
   increment = () => {
-    this.setState({ count: this.state.count + 1 });
+    let amountToIncrement = Number(this.props.amount) || 1;
+    this.setState({ count: this.state.count + amountToIncrement });
   };
 
   render() {
-    return <div onClick={this.increment}>{this.state.count}</div>;
+    return (
+      <div onClick={this.increment}>
+        <h3>{this.state.count}</h3>
+        <small>
+          <pre>{JSON.stringify(this.props)}</pre>
+        </small>
+      </div>
+    );
   }
 }
 
