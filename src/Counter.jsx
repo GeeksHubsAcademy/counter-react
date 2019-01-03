@@ -1,4 +1,5 @@
 import React from 'react';
+import './counter.css';
 
 class Counter extends React.Component {
   constructor(props) {
@@ -18,8 +19,8 @@ class Counter extends React.Component {
 
   render() {
     return (
-      <div onClick={this.increment}>
-        <h3>{this.state.count}</h3>
+      <div onClick={this.increment} className='counter'>
+        <h3 className={this.state.count % 2 === 0 ? 'even' : 'odd'}>{this.state.count}</h3>
         <small>
           <pre>{JSON.stringify(this.props)}</pre>
         </small>
