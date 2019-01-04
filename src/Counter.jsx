@@ -10,10 +10,18 @@ class Counter extends React.Component {
   increment = () => {
     let amountToIncrement = Number(this.props.amount) || 1;
 
-    if (!this.props.max || this.props.max >= this.state.count + amountToIncrement) {
-      this.setState({ count: this.state.count + amountToIncrement });
-    } else {
-      this.setState({ count: Number(this.props.from) || 0 });
+    if (amountToIncrement > 0) {
+      if (!this.props.max || this.props.max >= this.state.count + amountToIncrement) {
+        this.setState({ count: this.state.count + amountToIncrement });
+      } else {
+        this.setState({ count: Number(this.props.from) || 0 });
+      }
+    } else if (amountToIncrement < 0) {
+      if (!this.props.min || this.props.min <= this.state.count + amountToIncrement) {
+        this.setState({ count: this.state.count + amountToIncrement });
+      } else {
+        this.setState({ count: Number(this.props.from) || 0 });
+      }
     }
   };
 
